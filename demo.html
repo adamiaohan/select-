@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .select-box {
+            cursor: pointer;
+            width: 100px;
+            padding: 20px;
+            margin-top: 100px;
+            margin-left: 100px;
+            border: 1px solid #eee;
+        }
+
+        .slide {
+            position: absolute;
+            width: 140px;
+            background: #fff;
+            margin-left: -21px;
+            display: none;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1;
+            border: 1px solid #eee;
+        }
+
+        .slide .item {
+            line-height: 50px;
+            padding-left: 20px;
+            background: #fff;
+            -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05);
+        }
+
+        .slide .item:hover {
+            background: #fafafa;
+        }
+
+        .slide::-webkit-scrollbar {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="select-box">
+        <div class="sb-ac">
+            <span>请选择国家 V</span>
+        </div>
+        <ul class="slide">
+            <li class="item">中国</li>
+            <li class="item">美国</li>
+            <li class="item">韩国</li>
+            <li class="item">日本</li>
+            <li class="item">火之国</li>
+        </ul>
+    </div>
+    <div class="select-box">
+    <div class="sb-ac">
+        <span>请选择国家 V</span>
+    </div>        
+    <ul class="slide">
+        <li class="item">中国</li>
+        <li class="item">美国</li>
+        <li class="item">韩国</li>
+        <li class="item">日本</li>
+        <li class="item">火之国</li>
+    </ul>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="select.js"></script>
+    <script>
+        $('.select-box').select({
+            slideBox: '.slide', //下拉框
+            option: '.item',  //下拉框里的子元素
+            showBox: 'span' //显示内容的地方
+        });
+        console.log(111)
+    </script>
+</body>
+
+</html>
